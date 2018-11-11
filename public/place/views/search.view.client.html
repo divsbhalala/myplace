@@ -1,0 +1,102 @@
+<header class="w3-display-container w3-content w3-wide1 w3-animate-opacity" id="home">
+
+    <div class="container search-form w3-animate-opacity example" style="background: rgba(0, 0, 0, 0.2);position: fixed; top: 30%; left: 35%; max-width: 500px; width: 100%;">
+        <div class="intro-lead-in">Discover your favourite places!!!</div>
+        <!--<div class="intro-text">-->
+            <!--<h2 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>My</b></span>-->
+                <!--<span class="w3-text-grey">Place</span></h2>-->
+        <!--</div>-->
+        <div class="container1 m-t-10" id="searchbar">
+            <div class="searchGroup col-md-12">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input ng-model="$ctrl.place" class="form-control input-xlg homeinput"
+                               placeholder="I am looking for eg: pizza">
+                        <div ng-show="$ctrl.errorplace" class="alert alert-danger" role="alert">
+                            {{$ctrl.errorplace}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input ng-model="$ctrl.location" class="form-control input-xlg homeinput" id="city"
+                               placeholder="I am near eg: surat">
+                        <div ng-show="$ctrl.errorlocation" class="alert alert-danger" role="alert">
+                            {{$ctrl.errorlocation}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <a ng-click="$ctrl.search()" class="btn btn-primary btn-block btn-xlg">Search</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<div class="container-fluid w3-animate-opacity">
+    <div ng-show="$ctrl.geoLocate" class="container-fluid">
+        <h4>&nbsp</h4>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 example">
+                <h2 ng-show="$ctrl.places.length > 0" class="yml-feed-bl">Places near you</h2>
+                <div class="media" ng-repeat="place in $ctrl.places">
+                    <div class="media-body well" ng-class-odd="'oddtile'" ng-class-even="'eventile'">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8">
+                                <h4 class="media-heading">
+                                    <a class="pointer" ng-click="$ctrl.findBizById(place.id)">
+                                        <h4 class="smallheader below-flex">
+                                            {{place.name}} </h4>
+
+                                    </a>
+                                </h4>
+                                <p id="categoryname" class="bold">{{place.categories[0].name}}</p>
+                            </div>
+
+                            <div class="hidden-xs col-sm-4">
+                                <p class="addressadjust">{{place.location.formattedAddress[0]}}</p>
+                                <p class="addressadjust">{{place.location.formattedAddress[1]}}</p>
+                                <p class="addressadjust">{{place.location.formattedAddress[2]}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden-xs col-sm-6">
+                <h2 ng-show="$ctrl.trendingplaces.length > 0" class="yml-feed-bl">Popular Places</h2>
+                <div class="extendmore">
+                    <div class="media" ng-repeat="place in $ctrl.trendingplaces">
+                        <div class="media-body well">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-8">
+                                    <h4 class="media-heading">
+                                        <a ng-click="$ctrl.findBizById(place.venue.id)">
+                                            <h4 class="smallheader below-flex">
+                                                {{place.venue.name}} </h4>
+
+                                        </a>
+                                    </h4>
+                                    <p id="categ" class="bold">{{place.venue.categories[0].name}}</p>
+                                </div>
+
+                                <div class="hidden-xs col-sm-4">
+                                    <p class="addressadjust">{{place.venue.location.formattedAddress[0]}}</p>
+                                    <p class="addressadjust">{{place.venue.location.formattedAddress[1]}}</p>
+                                    <p class="addressadjust">{{place.venue.location.formattedAddress[2]}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <h2>&nbsp</h2>
+
+
+</div>

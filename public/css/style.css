@@ -1,0 +1,306 @@
+
+#address {
+    text-align: center;
+}
+
+/*#address-1{*/
+/*line-height: 5px*/
+/*}*/
+#googleMap {
+    height: 400px;
+    width: 500px;
+
+}
+
+.addressadjust {
+    margin-bottom: 0px;
+
+}
+
+.flexslider-container {
+    height: 600px;
+    overflow: hidden;
+}
+.text-center{
+    text-align: center;
+}
+
+#placename {
+    color: crimson;
+}
+
+.below-flex {
+    color: crimson;
+}
+
+#categoryname {
+
+    font-family: inherit;
+    color: inherit;
+    opacity: 0.7;
+    /*background-color: whitesmoke;*/
+}
+
+.glyph {
+    font-size: x-large;
+}
+.m-t-10{
+    margin-top:10px;
+}
+
+#home {
+    max-width: 1500px;
+}
+
+header {
+    text-align: center;
+    color: #fff;
+}
+
+header .intro-lead-in {
+    color: #5C1205;
+    font-size: xx-large;
+    font-stretch: extra-expanded;
+    font-style: normal;
+    font-family: cursive;
+}
+
+header .intro-text {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    line-height: 22px;
+    color: chocolate;
+}
+
+.form-control.input-xlg.homeinput {
+    background-color: black;
+    opacity: 0.5;
+}
+.search-form .form-control{
+    color: #fff;
+}
+header .container {
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.well {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.adjust {
+    padding-top: 60px;
+}
+
+@media (min-width: 768px) {
+
+    header .intro-lead-in {
+        color: #5C1205;
+        font-size: xx-large;
+        font-stretch: extra-expanded;
+        font-style: normal;
+        font-family: cursive;
+    }
+
+    header .intro-text {
+        padding-top: 80px;
+        padding-bottom: 90px;
+    }
+
+    header .intro-text .intro-lead-in {
+        margin-bottom: 30px;
+        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 75px;
+        font-style: normal;
+        line-height: 40px;
+        font-weight: 400;
+        color: darkgoldenrod;
+    }
+
+    .side {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .map {
+        padding-bottom: 100px;
+    }
+
+    /*.well{*/
+    /*background-color: lightskyblue !important;*/
+}
+
+@media (max-width: 768px) {
+    .flexslider-container {
+        height: 250px;
+    }
+
+    .example {
+        padding-right: 80px;
+        padding-left: 5px;
+    }
+
+    .review-pad {
+        padding-right: 20px;
+    }
+
+    .padding-1 {
+        padding-right: 15px;
+        padding-top: 10px;
+
+    }
+
+    .middle {
+        font-size: x-large;
+        padding-right: 80px;
+
+    }
+
+    .well {
+        padding-bottom: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-bottom: 10px;
+    }
+
+    .below-flex {
+        padding-left: 10px;
+
+    }
+
+    .bold {
+        padding-left: 10px;
+    }
+}
+
+.extend {
+    overflow: auto;
+    height: 200px;
+}
+
+.extendmore {
+    overflow: auto;
+    height: 475px;
+}
+
+.extendmore-1 {
+    overflow: auto;
+    height: 500px;
+}
+
+.extendmore-2 {
+    overflow: auto;
+    height: 205px;
+}
+
+.extend-4 {
+    overflow: auto;
+    height: 375px;
+}
+
+.padding-1 {
+    padding-top: 15px;
+}
+
+.fade {
+    -webkit-animation: fadein 1s;
+}
+
+#gly {
+    font-size: x-large
+}
+
+#left-tri {
+    position: fixed;
+    margin-top: 25px
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#list-view {
+    margin-top: 25px
+}
+
+#placeimage {
+    width: 100%;
+    height: 250px;
+}
+
+@media (min-width: 768px) {
+    #placeimage {
+        width: 100%;
+        height: 560px;
+    }
+}
+
+.middle {
+    text-align: center;
+
+}
+
+.yml {
+    color: mediumblue;
+    border-bottom: 1px solid #eee;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(238, 238, 238);
+}
+
+.yml-feed {
+    color: crimson;
+    border-bottom: 1px solid #eee;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(238, 238, 238);
+}
+
+.yml-feed-bl {
+    color: blue;
+    border-bottom: 1px solid #eee;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(238, 238, 238);
+}
+
+.blue {
+    color: blue;
+}
+
+.fbi {
+    color: crimson
+
+}
+
+.red {
+    color: crimson;
+}
+
+.bold {
+    font-weight: bold;
+    opacity: 0.7;
+}
+.pointer{
+    cursor: pointer;
+}
+a.pointer{
+    text-decoration: none;
+}

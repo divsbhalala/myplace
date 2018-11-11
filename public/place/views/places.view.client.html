@@ -1,0 +1,80 @@
+<div class="container-fluid w3-animate-opacity example">
+    <div class="container-fluid col-md-12" id="list-view">
+        <div class="row">
+            <div class="col-md-4 form-group">
+                <input ng-model="$ctrl.place" class="form-control input-xlg" placeholder="I am looking for...">
+                <div ng-show="$ctrl.errorplace" class="alert alert-danger" role="alert">
+                    {{$ctrl.errorplace}}
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <input ng-model="$ctrl.location" class="form-control input-xlg" id="city" placeholder="Location">
+                <div ng-show="$ctrl.errorlocation" class="alert alert-danger" role="alert">
+                    {{$ctrl.errorlocation}}
+                </div>
+            </div>
+            <div class="col-md-4 form-group">
+                <a ng-click="$ctrl.search()" class="btn btn-primary btn-block btn-xlg">Search</a>
+            </div>
+        </div>
+    </div>
+    <div ng-show="$ctrl.places == null || $ctrl.places.length == 0" class="alert alert-info" role="alert">
+        "No results found!!! Please try searching with different inputs"
+    </div>
+    <div class="container-fluid">
+        <h4>&nbsp</h4>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <h2 ng-hide="$ctrl.info" class="yml-feed-bl">Places near you</h2>
+                <div class="media" ng-repeat="place in $ctrl.places">
+                    <div class="media-body well">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8">
+                                <h4 class="media-heading">
+                                    <a class="pointer" ng-click="$ctrl.findBizById(place.id)">
+                                        <h4 class="smallheader red">
+                                            {{place.name}} </h4>
+                                    </a>
+                                </h4>
+                                <p id="categoryname" class="bold">{{place.categories[0].name}}</p>
+                            </div>
+
+                            <div class="hidden-xs col-sm-4">
+                                <p class="addressadjust">{{place.location.formattedAddress[0]}}</p>
+                                <p class="addressadjust">{{place.location.formattedAddress[1]}}</p>
+                                <p class="addressadjust">{{place.location.formattedAddress[2]}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden-xs col-sm-6">
+                <h2 ng-show="$ctrl.trendingplaces.length > 0" class="yml-feed-bl">Popular Places</h2>
+                <div class="extendmore">
+                    <div class="media" ng-repeat="place in $ctrl.trendingplaces">
+                        <div class="media-body well">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-8">
+                                    <h4 class="media-heading">
+                                        <a ng-click="$ctrl.findBizById(place.venue.id)">
+                                            <h4 class="smallheader below-flex">
+                                                {{place.venue.name}} </h4>
+
+                                        </a>
+                                    </h4>
+                                    <p id="categoryname" class="bold">{{place.venue.categories[0].name}}</p>
+                                </div>
+
+                                <div class="hidden-xs col-sm-4">
+                                    <p class="addressadjust">{{place.venue.location.formattedAddress[0]}}</p>
+                                    <p class="addressadjust">{{place.venue.location.formattedAddress[1]}}</p>
+                                    <p class="addressadjust">{{place.venue.location.formattedAddress[2]}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

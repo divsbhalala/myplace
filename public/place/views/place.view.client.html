@@ -1,0 +1,26 @@
+<div class="container-fluid" id="left-tri">
+    <a ng-click="$ctrl.goback()">
+        <span class="glyphicon glyphicon-triangle-left" id="gly">
+        </span>
+    </a>
+</div>
+
+<div class="side w3-animate-opacity example">
+    <flex-slider slide="image in $ctrl.photo track by image.id" animation="slide" ng-show="$ctrl.photo.length">
+        <li>
+            <img id="placeimage" ng-src="{{image.prefix}}500x300{{image.suffix}}"/>
+            {{item.name}}
+        </li>
+    </flex-slider>
+
+
+    <h1 class="text-center">{{$ctrl.place.name}}</h1>
+    <div>
+        <h2>Location</h2>
+        <div class="map">
+            <ng-map center="[{{$ctrl.lat}},{{$ctrl.lng}}]">
+                <marker position="[{{$ctrl.lat}},{{$ctrl.lng}}]"></marker>
+            </ng-map>
+        </div>
+    </div>
+</div>
